@@ -1,2 +1,0 @@
-# expenso
-digitize you expenses
