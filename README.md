@@ -1,0 +1,2 @@
+# expenso
+digitize you expenses
