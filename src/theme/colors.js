@@ -25,7 +25,7 @@ const colors = {
     textColor: '#404040',
     lightGreen: 'rgb(201,226,174)',
     iconColor: '#636364',
-    red: '#f46161',
+    red: '#EF5350',
     textLink: '#656e82',
     inputColor: '#746CDE',
     inputBorder: '#666BDB',

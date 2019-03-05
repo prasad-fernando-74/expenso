@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 import { connect } from 'react-redux';
-import ExpenseListItem from './ExpenseListItem';
+import ExpenseListItem from '../ExpenseListItem';
 
 class ExpenseList extends Component {
     renderItem(expense) {

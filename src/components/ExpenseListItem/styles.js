@@ -1,4 +1,4 @@
-import { colors } from '../../theme';
+import { colors, fonts } from '../../theme';
 
 const styles = {
     topContainer: { 
@@ -28,9 +28,9 @@ const styles = {
         alignItems: 'center' 
     },
     imageText: { 
-        color: 'rgba(255,255,255,.5)', 
-        fontSize: 24, 
-        fontWeight: '700' 
+        ...fonts.h1,
+        color: colors.white,
+        opacity: 0.8
     },
     rowOneContainer: {
         flexDirection: 'row', 
@@ -49,24 +49,22 @@ const styles = {
         paddingTop: 8
     },
     merchant: {
-        fontSize: 18, 
-        color: 'black', 
-        fontWeight: '700'
+       ...fonts.h4
     },
     date: {
-        fontSize: 12, 
+        ...fonts.h7, 
         color: '#3b60c4'
     },
     time: {
-        fontSize: 12, 
+        ...fonts.h7,
         color: '#3b60c4'
     },
     invoice: {
-        fontWeight: '700'
+        ...fonts.h6,
     },
     totalCost: {
-        fontWeight: '700',
-        color: '#f46161',
+        ...fonts.h4,
+        color: colors.orangeRed
     }
 };
 
