@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import moment from 'moment';
 import styles from './styles';
 import { DATE_TIME_FORMATS } from '../../config';
+import { randomHex } from '../../services/helpers';
 
 class ExpenseListItem extends Component {
 
@@ -14,12 +15,12 @@ class ExpenseListItem extends Component {
 
     render() {
         const { merchant, timestamp, invoiceId, totalCost, currency } = this.props.expense.item;
-        console.log(timestamp);
+
         return (
             <View style={styles.topContainer}>
                 <View style={styles.leftContainer} >
-                    <View style={styles.image}>
-                        <Text style={styles.imageText}>A</Text>
+                    <View style={{ backgroundColor: randomHex(), height: 40, width: 40, borderRadius: 40, justifyContent: 'center', alignItems: 'center' }}>
+                        <Text style={styles.imageText}>{merchant.charAt(0).toUpperCase()}</Text>
                     </View>
                 </View>
 
@@ -41,12 +42,6 @@ class ExpenseListItem extends Component {
                             {moment(timestamp).format(DATE_TIME_FORMATS.time)}
                         </Text>
                     </View>
-
-                    {/*<View style={styles.rowTwoContainer}>
-                        <Text style={{fontWeight: '700'}} ellipsizeMode="tail" numberOfLines={1}>
-                            Some description goes here here here here here here herhehre
-                        </Text>
-                    </View>*/}
 
                     <View style={styles.rowThreeContainer}>
                         <Text style={styles.totalCost} ellipsizeMode="tail" numberOfLines={1}>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Scene, Router, Actions } from 'react-native-router-flux';
 import SignIn from './components/SignIn';
 import ExpenseList from './components/ExpenseList';
+import NavBar from './components/NavBar';
 
 const RouterComponent = () => {
     return (
@@ -10,18 +11,20 @@ const RouterComponent = () => {
                 <Scene key='auth'>
                     <Scene 
                         key='signin' 
+                        title='Sign In'
+                        navBar={NavBar}
                         component={SignIn} 
-                        title='Please Sign In' 
                         initial 
                     />
                 </Scene>
                 <Scene key='main'>
                     <Scene 
+                        key='expenseList' 
+                        title='Expenses' 
+                        navBar={NavBar}
+                        component={ExpenseList} 
                         rightTitle='Sign Out'
                         onRight={() => Actions.auth()}
-                        key='expenseList' 
-                        component={ExpenseList} 
-                        title='Expenses' 
                         initial
                     />
                 </Scene>

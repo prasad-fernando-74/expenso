@@ -18,3 +18,7 @@ export function normalizeFont(size) {
   }
   return Math.round(PixelRatio.roundToNearestPixel(size) * scaleX) - 2;
 }
+
+export function randomHex() {
+  return '#' + Math.random().toString(16).slice(2, 8);
+}
