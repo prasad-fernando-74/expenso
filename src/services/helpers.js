@@ -22,3 +22,9 @@ export function normalizeFont(size) {
 export function randomHex() {
   return '#' + Math.random().toString(16).slice(2, 8);
 }
+
+export function scaleHeight(height, isScaleExpend = true) {
+  let delta = scaleY;
+  if (!isScaleExpend && scaleY > 1) { delta = 1; }
+  return Math.round(height * delta);
+}

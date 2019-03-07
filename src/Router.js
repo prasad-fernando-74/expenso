@@ -1,8 +1,10 @@
 import React from 'react';
-import { Scene, Router, Actions } from 'react-native-router-flux';
+import { Scene, Router } from 'react-native-router-flux';
 import SignIn from './components/SignIn';
 import ExpenseList from './components/ExpenseList';
 import NavBar from './components/NavBar';
+import BillDetails from './components/BillDetails';
+import Bill from './components/Bill';
 
 const RouterComponent = () => {
     return (
@@ -23,9 +25,19 @@ const RouterComponent = () => {
                         title='Expenses' 
                         navBar={NavBar}
                         component={ExpenseList} 
-                        rightTitle='Sign Out'
-                        onRight={() => Actions.auth()}
                         initial
+                    />
+                    <Scene
+                        key='billDetails'
+                        title='Bill Details'
+                        navBar={NavBar}
+                        component={BillDetails}
+                    />
+                    <Scene
+                        key='bill'
+                        title='Bill'
+                        navBar={NavBar}
+                        component={Bill}
                     />
                 </Scene>
             </Scene>

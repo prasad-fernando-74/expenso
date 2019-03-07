@@ -20,7 +20,6 @@ const styles = {
         justifyContent: 'center'
     },
     image: { 
-        backgroundColor: colors.bluePurple, 
         height: 40, 
         width: 40, 
         borderRadius: 40, 
